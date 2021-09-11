@@ -1,5 +1,5 @@
 function load_images(){
-	//player image ,virus mask
+	//function load images load all the necessary images on the screen
 
 	//this are global function
 	enemy_image = new Image;
@@ -16,7 +16,8 @@ function load_images(){
 
 
 function init(){
-     //define the objects we will have in the game
+
+  //function init define the objects that we will have in the game
 canvas = document.getElementById("mycanvas");
 console.log(canvas);
 W=700;
@@ -86,7 +87,7 @@ player = {
 }
 
  mask = {  //static it will stand 
- 	x : W-100, //mask is standing at the side end
+ 	x : W-100, //mask is standing at the left side end
  	y : H/2,
  	w : 60,
  	h : 60,
@@ -106,6 +107,7 @@ player = {
 
 }
 
+//function overlap is used to check the collision between the covid people and mask as well
 function isOverlap(rect1,rect2){
    if(rect1.x < rect2.x + rect2.w && 
    	  rect1.x + rect1.w > rect2.x && 
